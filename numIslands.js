@@ -13,7 +13,7 @@ let numIslands = (grid) => {
     return count;
 };
 
-// can use either DFS or BFS, but DFS is a bit easier to implement
+// can use either DFS or BFS, but DFS is a bit easier to implementdf
 
 let dfs = (grid, i , j) => {
     if(i >= 0 && j >= 0 && i < grid.length && j < grid[0].length && grid[i][j] === '1') {
