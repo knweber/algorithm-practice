@@ -29,4 +29,17 @@ function reverseLinkedList(node) {
   return curr;
 }
 
+// shorter implementation
+
+function reverseLinkedList(head) {
+  var prev = null;
+  while(head) {
+    var next = head.next;  //  next node
+    head.next = prev;  //  head.next is now null
+    prev = head;  //  the value of head is assigned to 'previous'
+    head = next;  //  'head' now refers to the next node (the original head and head.next have now switched places)
+  }
+  return prev;
+}
+
 reverseLinkedList(a);
