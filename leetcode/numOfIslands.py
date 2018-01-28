@@ -5,8 +5,8 @@ class Solution(object):
         row = len(grid)
         col = len(grid[0])
         count = 0
-        for i in xrange(row):
-            for j in xrange(col):
+        for i in range(row):
+            for j in range(col):
                 if grid[i][j] == '1': # if we find land
                     self.dfs(grid,row,col,i,j)
                     count += 1
@@ -29,4 +29,4 @@ class Solution(object):
 if __name__ == '__main__':
     print Solution().numIslands([['1','1','1','1','0'],['1','1','0','1','0'],['1','1','0','0','0'],['0','0','0','0','0']])
     # -> 1
-    print Solution().numIslands([['1','1','0','0','0'],['1','1','0','0','0'],['0','0','1','0','0'],['0','0','0','1','1']]) 
+    print Solution().numIslands([['1','1','0','0','0'],['1','1','0','0','0'],['0','0','1','0','0'],['0','0','0','1','1']])
